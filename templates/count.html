@@ -1,0 +1,14 @@
+<h1>COUNT</h1>
+<hr>
+<a href={% url "home" %}>Home</a>
+<hr>
+
+<h2>Original text is:</h2>
+{{fulltext}}
+<h2>there are {{word_count}} words</h2>
+<h2>list of the words are:</h2>
+<hr>
+{% for word,count in word_dictonary_list %}
+{{word}}-{{count}}
+<hr>
+{%endfor%}
